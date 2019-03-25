@@ -22,7 +22,7 @@ var score_audio = new Audio();
 fly.src = "fly.mp3";
 score_audio.src = "score.mp3";
 
-var gap = 200;
+var gap = 100;
 
 // При нажатии на какую-либо кнопку
 document.addEventListener("keydown", moveUp);
