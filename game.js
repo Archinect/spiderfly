@@ -5,7 +5,7 @@ var bird = new Image();
 var bg = new Image();
 var fg = new Image();
 var flameUp = new Image();
-var flameDown = new Image();
+var flameBottom = new Image();
 var cakepng = new Image();
 
 bird.src = "Spider.png";
