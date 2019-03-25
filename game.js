@@ -4,15 +4,15 @@ var ctx = cvs.getContext("2d");
 var bird = new Image();
 var bg = new Image();
 var fg = new Image();
-var pipeUp = new Image();
-var pipeBottom = new Image();
+var flameUp = new Image();
+var flameDown = new Image();
 var cakepng = new Image();
 
 bird.src = "Spider.png";
 bg.src = "bg.png";
 fg.src = "fg.png";
-pipeUp.src = "VetkaUp.png";
-pipeBottom.src = "VetkaDown.png";
+flameUp.src = "flameUp.gif";
+flameBottom.src = "VflameDown.gif";
 cakepng.src = "cake.png";
 
 // Звуковые файлы
@@ -33,9 +33,9 @@ function moveUp() {
 }
 
 // Создание блоков
-var pipe = [];
+var flame = [];
 
-pipe[0] = {
+flame[0] = {
  x : cvs.width,
  y : 0
 }
@@ -61,25 +61,25 @@ function draw() {
  ctx.drawImage(pipeBottom, pipe[i].x, pipe[i].y + pipeUp.height + gap);
  ctx.drawImage(cakepng, pipe[i].x, pipe[i].y+pipeUp.height+30);
 
- pipe[i].x--;
+ flame[i].x--;
 
- if(pipe[i].x == 125) {
+ if(flame[i].x == 125) {
  pipe.push({
  x : cvs.width,
- y : Math.floor(Math.random(0,10) * pipeUp.height) - pipeUp.height
+ y : Math.floor(Math.random(0,10) * flameUp.height) - flameUp.height
  });
  }
 
  // Отслеживание прикосновений
- if(xPos + bird.width >= pipe[i].x
- && xPos <= pipe[i].x + pipeUp.width
- && (yPos <= pipe[i].y + pipeUp.height
- || yPos + bird.height >= pipe[i].y + pipeUp.height + gap) || yPos + bird.height >= cvs.height - fg.height) {
+ if(xPos + bird.width >= flame[i].x
+ && xPos <= flame[i].x + flameeUp.width
+ && (yPos <= flame[i].y + flameUp.height
+ || yPos + bird.height >= flame[i].y + flameUp.height + gap) || yPos + bird.height >= cvs.height - fg.height) {
  score = 0; // Перезагрузка страницы
  }
 
 
- if(pipe[i].x == 5) {
+ if(flame[i].x == 5) {
  score++;
  score_audio.play();
  }
