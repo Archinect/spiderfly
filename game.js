@@ -55,7 +55,7 @@ var grav = 1.5;
 
 function draw() {
  ctx.drawImage(bg, 0, 0);
- ctx.drawImage(cake, cake.x, cake.y);
+ ctx.drawImage(cake, xPos+10, yPos);
 
  for(var i = 0; i < pipe.length; i++) {
  ctx.drawImage(pipeUp, pipe[i].x, pipe[i].y);
