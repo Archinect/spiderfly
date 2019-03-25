@@ -6,12 +6,14 @@ var bg = new Image();
 var fg = new Image();
 var pipeUp = new Image();
 var pipeBottom = new Image();
+var cakepng = new Image();
 
 bird.src = "Spider.png";
 bg.src = "bg.png";
 fg.src = "fg.png";
 pipeUp.src = "VetkaUp.png";
 pipeBottom.src = "VetkaDown.png";
+cakepng.src = "cake.png";
 
 // Звуковые файлы
 var fly = new Audio();
@@ -36,6 +38,11 @@ var pipe = [];
 pipe[0] = {
  x : cvs.width,
  y : 0
+}
+var cake = [];
+cake[0] = {
+ x : cvs.width,
+ y : -20
 }
 
 var score = 0;
