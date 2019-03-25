@@ -42,7 +42,7 @@ pipe[0] = {
 var cake = [];
 cake[0] = {
  x : cvs.width,
- y : -20
+ y : 0
 }
 
 var score = 0;
@@ -55,6 +55,7 @@ var grav = 1.5;
 
 function draw() {
  ctx.drawImage(bg, 0, 0);
+ ctx.drawImage(cake, cake.x, cake.y);
 
  for(var i = 0; i < pipe.length; i++) {
  ctx.drawImage(pipeUp, pipe[i].x, pipe[i].y);
