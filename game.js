@@ -63,8 +63,12 @@ function draw() {
  }
 
  // Отслеживание прикосновений
-if(bird.xPos == pipe[i].x || bird.yPos == pipe[i].y)
- location.reload();
+ if(xPos + bird.width >= pipe[i].x
+ && xPos <= pipe[i].x + pipeUp.width
+ && (yPos <= pipe[i].y + pipeUp.height
+ || yPos + bird.height >= pipe[i].y + pipeUp.height + gap) || yPos + bird.height >= cvs.height - fg.height) {
+ location.reload(); // Перезагрузка страницы
+ }
 
 
  if(pipe[i].x == 5) {
