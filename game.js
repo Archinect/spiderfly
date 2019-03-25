@@ -66,7 +66,7 @@ function draw() {
  if(pipe[i].x == 125) {
  pipe.push({
  x : cvs.width,
- y : Math.floor(Math.random() * pipeUp.height) - pipeUp.height
+ y : Math.floor(Math.random(0,10) * pipeUp.height) - pipeUp.height
  });
  }
 
