@@ -44,12 +44,7 @@ var xPos = 10;
 var yPos = 150;
 var grav = 1.5;
 
-function intersectRect(r1, r2) { 
-return !(r2.left > r1.right || 
-r2.right < r1.left || 
-r2.top > r1.bottom || 
-r2.bottom < r1.top); 
-}
+
 
 function draw() {
  ctx.drawImage(bg, 0, 0);
@@ -68,7 +63,8 @@ function draw() {
  }
 
  // Отслеживание прикосновений
- intersectRect(bird, pipe[i])
+if(bird.xPos == pipe[i].x || bird.yPos == pipe[i].y)
+ location.reload();
 
 
  if(pipe[i].x == 5) {
