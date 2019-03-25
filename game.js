@@ -59,7 +59,7 @@ function draw() {
  for(var i = 0; i < pipe.length; i++) {
  ctx.drawImage(pipeUp, pipe[i].x, pipe[i].y);
  ctx.drawImage(pipeBottom, pipe[i].x, pipe[i].y + pipeUp.height + gap);
- ctx.drawImage(cakepng, pipe[i].x, pipe[i].y-30);
+ ctx.drawImage(cakepng, pipe[i].x, pipe[i].y+pipeUp.height+30);
 
  pipe[i].x--;
 
