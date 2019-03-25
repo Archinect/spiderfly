@@ -72,7 +72,7 @@ function draw() {
 
  // Отслеживание прикосновений
  if(xPos + bird.width >= flame[i].x
- && xPos <= flame[i].x + flameeUp.width
+ && xPos <= flame[i].x + flameUp.width
  && (yPos <= flame[i].y + flameUp.height
  || yPos + bird.height >= flame[i].y + flameUp.height + gap) || yPos + bird.height >= cvs.height - fg.height) {
  score = 0; // Перезагрузка страницы
