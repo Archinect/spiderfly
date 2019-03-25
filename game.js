@@ -66,7 +66,7 @@ function draw() {
  if(flame[i].x == 125) {
  pipe.push({
  x : cvs.width,
- y : Math.floor(Math.random(0,10) * flameUp.height) - flameUp.height
+ y : Math.floor(Math.random() * flameUp.height) - flameUp.height
  });
  }
 
