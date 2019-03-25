@@ -1,4 +1,4 @@
-var cvs = document.getElementById("canvas");
+var cvs = document.getElementById("iframe");
 var ctx = cvs.getContext("2d");
 
 var bird = new Image();
