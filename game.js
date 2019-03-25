@@ -57,9 +57,9 @@ function draw() {
  ctx.drawImage(bg, 0, 0);
 
  for(var i = 0; i < flame.length; i++) {
- ctx.drawImage(flameUp, pipe[i].x, pipe[i].y);
- ctx.drawImage(flameBottom, pipe[i].x, pipe[i].y + pipeUp.height + gap);
- ctx.drawImage(cakepng, pipe[i].x, pipe[i].y+pipeUp.height+30);
+ ctx.drawImage(flameUp, flame[i].x, flame[i].y);
+ ctx.drawImage(flameBottom, flame[i].x, flame[i].y + flameUp.height + gap);
+ ctx.drawImage(cakepng, flame[i].x, flame[i].y+flameUp.height+30);
 
  flame[i].x--;
 
