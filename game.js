@@ -34,7 +34,7 @@ function moveUp() {
 var pipe = [];
 
 pipe[0] = {
- x : cvs.width,
+ x : cvs.width-50,
  y : 0
 }
 
