@@ -12,7 +12,7 @@ bird.src = "Spider.png";
 bg.src = "bg.png";
 fg.src = "fg.png";
 flameUp.src = "flameUp.gif";
-flameBottom.src = "VflameDown.gif";
+flameBottom.src = "flameDown.gif";
 cakepng.src = "cake.png";
 
 // Звуковые файлы
